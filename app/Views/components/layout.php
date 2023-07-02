@@ -11,7 +11,7 @@
 		  <meta charset="utf-8">
 		  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-		  <title>- Toko - <?php echo $hlm?></title>
+		  <title>Tables / Data - NiceAdmin Bootstrap Template</title>
 		  <meta content="" name="description">
 		  <meta content="" name="keywords">
 
@@ -52,21 +52,21 @@
 
 		  <main id="main" class="main">
 
-			<div class="pagetitle">
-			  <h1><?php echo $hlm?></h1>
-			  <nav>
+		  <div class="pagetitle">
+			<h1>Data Tables</h1>
+			<nav>
 				<ol class="breadcrumb">
-				  <li class="breadcrumb-item">Home</li>
-				  <?php
+				<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+				<?php
 					if($hlm!="Home"){
-					  ?>
-					  <li class="breadcrumb-item"><?php echo $hlm?></li> 
-					  <?php
+						?>
+						<li class="breadcrumb-item"><?php echo $hlm?></li> 
+						<?php
 					}
-				  ?> 
+					?>          
 				</ol>
-			  </nav>
-			</div><!-- End Page Title -->
+			</nav>
+		  </div><!-- End Page Title -->
 
 			<section class="section">
 			  <div class="row">
@@ -74,8 +74,10 @@
 
 				  <div class="card">
 					<div class="card-body">
-					  <h5 class="card-title"><?php echo $hlm?></h5>
-					  <?= $this->renderSection('content') ?>
+					<h5 class="card-title"><?php echo $hlm?></h5>
+					<!-- Table with stripped rows -->
+					<?= $this->renderSection('content') ?>
+					<!-- End Table with stripped rows -->
 					</div>
 				  </div>
 
@@ -88,6 +90,9 @@
 		  <?= $this->include('components/footer') ?> 
 
 		  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+			<!-- JQUERY -->
+			<script src="<?php echo base_url()?>public/NiceAdmin/assets/js/jquery-3.3.1.min.js"></script>
 
 		  <!-- Vendor JS Files -->
 		  <script src="<?php echo base_url()?>public/NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
