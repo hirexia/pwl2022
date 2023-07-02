@@ -17,5 +17,21 @@
 
             return view('v_produk', $data);
         }
+
+        public function member()
+        {
+            $memberModel = new UserModel(); 
+            $member = $memberModel->findAll();
+            $data['members'] = $member;
+
+            return view('v_member', $data);
+        }
+
+        public function register()
+        {
+            return view('register_view');
+        }
+
+
     }
 ?>
